@@ -22,8 +22,8 @@ Steps to obtain wordpress docker and start it on your local machine:
 2. docker pull wordpress:php8.3-apache
 3. docker images
 4. docker network create my-network
-5. docker run -d --network my-network -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=mySchema mysql:latest
-6. docker run -d --network my-network -p 8080:80 wordpress:php8.3-apache 
+5. docker run -d --name mysql --network my-network -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=mySchema mysql:latest
+6. docker run -d --name wordpress --network my-network -p 8080:80 wordpress:php8.3-apache 
 
 <b>Note:</b> in the setup for connecting wordpress to mysql you will need to use the "Gateway" IP address, NOT localhost. This is probably going to be 172.18.0.1, but you can verify in docker desktop via inspecting the container and selecting network
 
