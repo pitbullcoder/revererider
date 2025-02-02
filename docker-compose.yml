@@ -46,7 +46,7 @@ services:
       WORDPRESS_DB_HOST: database:3306
       WORDPRESS_DB_NAME: '${DATABASE_NAME}'
       WORDPRESS_DB_USER: '${DATABASE_USER}'
-      WORDPRESS_DB_PASSWORD: '${DATABASE_ROOT_PASSWORD}'
+      WORDPRESS_DB_PASSWORD: '${DATABASE_PASSWORD}'
     volumes:
       - wordpress:/var/www/html
       - .src:/var/www/html/wp-content:rw
