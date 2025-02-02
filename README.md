@@ -26,7 +26,9 @@ The <b>ports</b> configuration opens a local port 8080 and redirects it to 80</b
 
 <b>Wordpress docker image fpm: </b>includes docker configuration telling it how to execute php code without us needing to configure a lot of that plumbing on our own. The fpm image comes with php working out of the box
 
-## Docker
+## All notes below are for manual installation without use of docker-compose 
+
+### Docker
 
 Steps to obtain wordpress docker and start it on your local machine:
 
