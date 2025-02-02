@@ -14,6 +14,18 @@ To initialize environment following tools are necessary
 
 <a href="[url](https://hub.docker.com/_/mysql)">Docker mySql</a>
 
+## Docker Compose notes
+
+To build the app from terminal execute: 
+
+<pre>docker compose up --build</pre>
+
+The <b>ports</b> configuration opens a local port 8080 and redirects it to 80</br>
+
+<b>Volumes</b> tells docker to use local directory nginx and override inside docker the directory /etc/nginx and override the conf.d file with the default.conf file in local directory nginx</br>
+
+<b>Wordpress docker image fpm: </b>includes docker configuration telling it how to execute php code without us needing to configure a lot of that plumbing on our own. The fpm image comes with php working out of the box
+
 ## Docker
 
 Steps to obtain wordpress docker and start it on your local machine:
